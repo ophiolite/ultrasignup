@@ -1,6 +1,5 @@
 import requests
 from string import lowercase
-from pymongo import MongoClient
 from bs4 import BeautifulSoup
 import json
 import sys
@@ -40,7 +39,5 @@ def parse_lst(filename):
             df = pd.read_json(line)
             df = df.join(pd.read_json(line))
     df.to_csv(test_2013)
-
-
 
 print result_years(years_dict)
