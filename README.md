@@ -7,11 +7,11 @@ In trail racing there is the common adage of DFL (dead last) is better than a DN
 This is a repo documenting my workflow in modeling this problem. This is evergreen as of November 10, 2016.
 
 November 9, 2016:
-* Finished creating scripts to scrape race results from ultrasignup.com
+* Finished creating python scripts to scrape race results from ultrasignup.com
 * Explored workflow for getting athlete data from each race
 
 November 10, 2016:
-* Finished creating scripts to pull all racers out of the race result files stored 
+* Finished creating python scripts to pull all racers out of the race result files stored 
 * Fixed bug in GDR scraper
 * Scraped athlete data and stored
 * Added python code to clean up results json object in athlete files
