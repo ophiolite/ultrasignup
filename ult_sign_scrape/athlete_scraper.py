@@ -2,6 +2,7 @@ import json
 import sys
 import pandas as pd
 import os
+import requests
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -14,12 +15,13 @@ def read_races(directory):
     OUTPUT: dataframe of race'''
     for p, dirs, files in os.walk(directory):
         for f in files:
-            racedf = pd.read_json(f)
+            racedf = pd.read_json(directory + '/' + f)
+            print f
             name_dict = athlete_dataframe(racedf)
             races = racers_race(name_dict)
 
 def athlete_dataframe(df):
-    athlete = racedf[['firstname','lastname']]
+    athlete = df[['firstname','lastname']]
     name_dict = athlete.to_dict('records')
     return name_dict
 
