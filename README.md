@@ -15,3 +15,4 @@ November 10, 2016:
 * Fixed bug in GDR scraper
 * Scraped athlete data and stored
 * Added python code to clean up results json object in athlete files
+* Added jupyter notebook working towards feature engineering of racer-related characteristics for modeling
