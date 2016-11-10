@@ -14,3 +14,4 @@ November 10, 2016:
 * Finished creating scripts to pull all racers out of the race result files stored 
 * Fixed bug in GDR scraper
 * Scraped athlete data and stored
+* Added python code to clean up results json object in athlete files
