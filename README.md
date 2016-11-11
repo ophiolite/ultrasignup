@@ -18,4 +18,4 @@ November 10, 2016:
 * Added jupyter notebook working towards feature engineering of racer-related characteristics for modeling
 
 November 11, 2016:
-* Create python code to create file of only desired athlete features for modeling
+* Creating python code to create file of only desired athlete features for modeling
