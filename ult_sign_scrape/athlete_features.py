@@ -18,14 +18,13 @@ def athlete_features(directory1, directory2):
 
             for p, dirs, files in os.walk(directory2):
                 for f in files:
-                    print f
                     if f == ff + '_clean.csv':
+                        print f
                         results = pd.read_json(directory2 + '/' + f)
                         clean['race_total'] = results['status'].count()
-                        clean.to_csv('athlete_features/%s_%s.csv' % (first, last))
+                        clean.to_csv('athlete_features/%s.csv' % ff)
                     else:
-                        print '%s_%s was not written to csv file' % (first, last)
-                        break
+                        continue
 
 
 
