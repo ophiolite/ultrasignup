@@ -23,3 +23,4 @@ November 11, 2016:
 
 November 12, 2016: 
 * Optimizing clean athlete code and athlete features code
+* Added python script to concatenate all athlete features into a single .csv for EDA 
