@@ -18,16 +18,16 @@ def clean_racers(directory):
                     json1_data = json.dumps(result[1:])
                     results = json.loads(json1_data)
                     results_df = pd.DataFrame(result)
-                    results_df.to_csv('clean_check1/%s' % ff)
+                    results_df.to_csv('clean_athlete/%s' % ff)
             except KeyError:
                 continue
             except ValueError:
                 continue
                 results = racer['Results'].values
-                json1_data = json.dumps(results[1])
+                json1_data = json.dumps(results[1:])
                 results = json.loads(json1_data)
                 results_df = pd.DataFrame(results)
-                results_df.to_csv('clean_check1/%s' % ff)
+                results_df.to_csv('clean_athlete/%s' % ff)
 
 
 if __name__ == '__main__':

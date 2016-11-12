@@ -21,7 +21,8 @@ def athlete_features(directory1, directory2):
                     if f == ff:
                         print f
                         results = pd.read_csv(directory2 + '/' + f)
-                        clean['race_total'] = results['status'].count()
+                        for each in results:
+                            clean['race_total'] = results['status'].count()
                         clean.to_csv('athlete_features/%s' % ff)
                     else:
                         continue
@@ -29,4 +30,4 @@ def athlete_features(directory1, directory2):
 
 
 if __name__ == '__main__':
-    athlete_features('racers', 'clean_check1')
+    athlete_features('racers', 'clean_athlete')
