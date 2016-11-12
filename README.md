@@ -14,8 +14,9 @@ November 10, 2016:
 * Finished creating python scripts to pull all racers out of the race result files stored 
 * Fixed bug in GDR scraper
 * Scraped athlete data and stored
-* Added python code to clean up results json object in athlete files
+* Added python script to clean up results json object in athlete files
 * Added jupyter notebook working towards feature engineering of racer-related characteristics for modeling
 
 November 11, 2016:
 * Created python script to create files of only desired athlete features for modeling
+* Fixed bug in python script to clean up the results in athlete files
