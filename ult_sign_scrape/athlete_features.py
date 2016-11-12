@@ -7,7 +7,6 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 def athlete_features(directory1, directory2):
-
     for p, dirs, files in os.walk(directory1):
         for ff in files:
             print ff
@@ -16,17 +15,18 @@ def athlete_features(directory1, directory2):
             last = str(athlete['LastName'])
             clean = athlete.drop(['ImageId', 'Status', 'FirstName', 'LastName', 'Results'], axis=1)
 
+
             for p, dirs, files in os.walk(directory2):
                 for f in files:
-                    if f == ff + '_clean.csv':
+                    if f == ff:
                         print f
-                        results = pd.read_json(directory2 + '/' + f)
+                        results = pd.read_csv(directory2 + '/' + f)
                         clean['race_total'] = results['status'].count()
-                        clean.to_csv('athlete_features/%s.csv' % ff)
+                        clean.to_csv('athlete_features/%s' % ff)
                     else:
                         continue
 
 
 
 if __name__ == '__main__':
-    athlete_features('racers', 'clean_athlete')
+    athlete_features('racers', 'clean_check1')
