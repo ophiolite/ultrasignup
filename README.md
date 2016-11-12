@@ -20,3 +20,6 @@ November 10, 2016:
 November 11, 2016:
 * Created python script to create files of only desired athlete features for modeling
 * Fixed bug in python script to clean up the results in athlete files to deal with multiple ids per athlete
+
+November 12, 2016: 
+* Optimizing clean athlete code and athlete features code
