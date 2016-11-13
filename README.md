@@ -1,6 +1,6 @@
 # ultrasignup
 
-# DFL > DNF > DNS? More Accurately Predicting No Shows
+# DFL < DNF < DNS? More Accurately Predicting No Shows
 
 In trail racing there is the common adage of DFL (dead last) is better than a DNF (did not finish) is better than a DNS (did not start). With the increasing popularity and selling out of ultra-distance trail races, many race directors are having difficulties in predicting how many applicants to accept. Sometimes they are resource-constricted and other times permit-constricted on how many racers can start a race. For the purposes of this study, I will be focusing on the “worst of all evils” in trail racing, predicting the DNS rate based on the individual characteristics of racers in the entrant list for a race. Racers don’t like to DNS and neither do the directors. Ultimately, this will allow a race director to allocate their resources more effectively leading up to and on race day. It will also allow the most popular of races to more accurately predict how it can approach “overselling” a race or how many to place on the waitlist.
 
@@ -24,4 +24,4 @@ November 11, 2016:
 November 12, 2016: 
 * Optimizing clean athlete code and athlete features code
 * Added python script to concatenate all athlete features into a single .csv for EDA 
-* Scoping python script to clean up race results for feature engineering
+* Added python script to clean up race results and concatenate into single .csv for EDA
