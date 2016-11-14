@@ -20,7 +20,7 @@ def race_runner_features(directory1, directory2):
             else:
                 continue
 
-    race_db.to_csv('race_master/master_database.csv')
+    race_db.to_csv('race_master/master_database_fe2.csv')
 
 if __name__ == '__main__':
-    race_runner_features('race_master/master_list', 'athlete_dataframe/athletes_features')
+    race_runner_features('race_master/master_list_fe2.csv', 'athlete_dataframe/athletes_features')
