@@ -32,3 +32,6 @@ November 13, 2016:
 * EDA work on cleaned dataframe
 * Updating jupyter notebook and exploring generalized relationships in dataset to the status (Finish/DNF/DNS) column
 * Started playing around with some simple models "off the shelf", Logistic Regression, Random Forest Classifier and Gradient Boosted Classifier, nothing too complex yet, simply for better understanding of data behavior
+
+November 14, 2016:
+* Crowd-sourcing more feature engineering. Beginning to add in more race-related details and scoping distance to listed hometown.
