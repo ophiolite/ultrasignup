@@ -36,3 +36,4 @@ November 13, 2016:
 November 14, 2016:
 * Crowd-sourcing more feature engineering. Beginning to add in more race-related details and scoping distance to listed hometown.
 * Continued EDA on model choice and metric evaluation parameters.
+* Trouble-shooting MVP model for multi-class predictions. DNF classifications appeared to be skewing results, merged DNF and Finished classes and improved prediction of DNS to a log loss of 0.008-0.003 (from 0.8). Confirmed suspicion it is very difficult to predict who will finish long distance ultras.
