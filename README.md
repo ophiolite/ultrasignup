@@ -27,3 +27,7 @@ November 12, 2016:
 * Added python script to clean up race results and concatenate into single .csv for EDA
 * Added python script to combine races and add on runner features by their identifying participant id number
 * Started initial EDA with some scatter plotting and getting handle of the dataset
+
+November 13, 2016:
+* EDA work on cleaned dataframe
+* updating jupyter notebook and exploring generalized relationships in dataset to the status (Finish/DNF/DNS) column
