@@ -35,3 +35,4 @@ November 13, 2016:
 
 November 14, 2016:
 * Crowd-sourcing more feature engineering. Beginning to add in more race-related details and scoping distance to listed hometown.
+* Continued EDA on model choice and metric evaluation parameters.
