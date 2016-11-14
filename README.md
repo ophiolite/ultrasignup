@@ -31,3 +31,4 @@ November 12, 2016:
 November 13, 2016:
 * EDA work on cleaned dataframe
 * updating jupyter notebook and exploring generalized relationships in dataset to the status (Finish/DNF/DNS) column
+* started playing around with some simple models "off the shelf", Logistic Regression, Random Forest Classifier and Gradient Boosted Classifier, nothing too complex yet, simply for better understanding of data behavior
