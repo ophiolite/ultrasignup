@@ -17,9 +17,9 @@ def clean_races(directory):
             df = race.drop(['photo_count', 'firstname', 'lastname', \
                             'drilldown', 'formattime', \
                         'race_count', 'bib', 'prior_count', \
-                        'agegroup', 'place', 'gender_place'], \
+                        'agegroup', 'age_rank', 'time', 'place', 'gender_place'], \
                          axis=1)
-            df.to_csv('cleaned_races/%s_fe2' % ff)
+            df.to_csv('cleaned_races/fe2/%s' % ff)
 
 def race_master(directory2):
     '''INPUT: directory of cleaned race csv files
@@ -38,4 +38,4 @@ def race_master(directory2):
 
 if __name__ == '__main__':
     clean_races('scraped_races')
-    race_master('cleaned_races')
+    race_master('cleaned_races/fe2')
