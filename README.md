@@ -36,5 +36,5 @@ November 13, 2016:
 November 14, 2016:
 * Crowd-sourcing more feature engineering. Beginning to add in more race-related details and scoping distance to listed hometown.
 * Continued EDA on model choice and metric evaluation parameters.
-* Trouble-shooting MVP model for multi-class predictions. DNF classifications appeared to be skewing results, merged DNF and Finished classes and improved prediction of DNS to a log loss of 0.008-0.003 (from 0.8). Confirmed suspicion it is very difficult to predict who will finish long distance ultras.
+* Trouble-shooting MVP model for multi-class predictions. DNF classifications appeared to be skewing results, merged DNF and Finished classes and ~~improved prediction of DNS to a log loss of 0.008-0.003 (from 0.8)~~. Confirmed suspicion it is very difficult to predict who will finish long distance ultras.
 * Identified data leakage! Fixed data leakage to get more reasonable log loss of 0.19-0.2 for Logistic Regression, Random Forest and Gradient Boosted Classifier models. ROC scores of 0.503-0.553. Work to be done for parameter optimization.
