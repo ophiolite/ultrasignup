@@ -32,15 +32,5 @@ def result_years(years):
         f.write(json_lst)
         f.close()
 
-def parse_lst(filename):
-    '''Go through list of json objects for each file and extract to csv format'''
-    df_raw = pd.read_csv(filename)
-    with open(filename) as f:
-        for line in f:
-            df = pd.read_json(line)
-            df = df.join(pd.read_json(line))
-    df.to_csv(test_2013)
-
-
 
 print result_years(years_dict)

@@ -7,7 +7,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 root_url = 'http://ultrasignup.com'
-directory = 'race_results'
+directory = 'scraped_races'
 
 def read_races(directory):
     '''Loop through race files and format into dataframe
@@ -43,4 +43,4 @@ def get_racer_results(root_url, fname, lname):
     f.close()
 
 if __name__ == '__main__':
-    read_races('race_results')
+    read_races('scraped_races')

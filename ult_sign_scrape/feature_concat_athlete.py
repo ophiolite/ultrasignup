@@ -15,7 +15,7 @@ def feature_dataframe(directory):
             athlete_list.append(data)
 
     frame = pd.concat(athlete_list)
-    frame.to_csv('athlete_dataframe/athletes_features')
+    frame.to_csv('athlete_dataframe/concat')
 
 if __name__ == '__main__':
     feature_dataframe('athlete_features')
