@@ -42,4 +42,5 @@ November 14, 2016:
 * Due to initial results, started v2 feature engineering: added seasons, race id number to the dataframe. Brainstorming and using crowd-sourced ideas to include other metrics easily engineered.
 
 November 15, 2016:
+* Trouble-shooting and rebuilding features for input into MVP model
 
