@@ -45,4 +45,6 @@ November 15, 2016:
 * Trouble-shooting and rebuilding features for input into MVP model
 * Initial look at model with new feature engineering yields ~~0.17~~-0.19 log loss and ROC scores of ~~~0.73-0.74~~ 0.68
     * New features = race season, race metro area (binary classification), race "prestige" (identified by waitlist/lottery/sell out or not)
+* Reduced feature dimensionality by removing rankings and total # races
+      * Improved auc score for RFC to 0.73 (kept runner rank, removed gender and age rank)
 
