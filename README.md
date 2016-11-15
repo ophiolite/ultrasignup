@@ -43,4 +43,6 @@ November 14, 2016:
 
 November 15, 2016:
 * Trouble-shooting and rebuilding features for input into MVP model
+* Initial look at model with new feature engineering yields 0.17-0.19 log loss and ROC scores of ~0.73-0.74
+    * New features = race id, race season, race metro area (binary classification), race "prestige" (identified by waitlist/lottery/sell out or not)
 
