@@ -54,5 +54,6 @@ November 15, 2016:
 
 November 16, 2016:
 * Cleaning up model workflow for final selection (alpha model)
-* Scoping early phase web app for deployment
+* Working on cost/benefit matrix to quantify value for final model selection
+* Scoping early phase web app for deployment to friends (will contact RDs directly for feedback for beta model deployment)
 
