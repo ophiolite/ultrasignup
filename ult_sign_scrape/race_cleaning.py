@@ -47,50 +47,74 @@ def clean_races(directory):
                 df['Season'] = 3
                 df['Metro_area'] = 0
                 df['WL_SO'] = 1
+                df['Entry_fee'] = 1
+                df['PPM'] = 2.5
             elif ff[:-8] == 'Black_Canyon':
                 df['Season'] = 4
                 df['Metro_area'] = 1
                 df['WL_SO'] = 0
+                df['Entry_fee'] = 0
+                df['PPM'] = 2.5
             elif ff[:-8] == 'Canyons':
                 df['Season'] = 1
                 df['Metro_area'] = 1
-                df['WL_SO'] = 0
+                df['WL_SO'] = 1
+                df['Entry_fee'] = 1
+                df['PPM'] = 3.2
             elif ff[:-8] == 'ES100':
                 df['Season'] = 2
                 df['Metro_area'] = 0
                 df['WL_SO'] = 0
+                df['Entry_fee'] = 0
+                df['PPM'] = 1.85
             elif ff[:-8] == 'FatDog':
                 df['Season'] = 2
                 df['Metro_area'] = 0
                 df['WL_SO'] = 1
+                df['Entry_fee'] = 1
+                df['PPM'] = 2.7
             elif ff[:-8] == 'JJ':
                 df['Season'] = 3
                 df['Metro_area'] = 1
                 df['WL_SO'] = 0
+                df['Entry_fee'] = 1
+                df['PPM'] = 2.65
             elif ff[:-8] == 'SD':
                 df['Season'] = 2
                 df['Metro_area'] = 1
                 df['WL_SO'] = 1
+                df['Entry_fee'] = 1
+                df['PPM'] = 2.65
             elif ff[:-8] == 'SOB':
                 df['Season'] = 4
                 df['Metro_area'] = 1
                 df['WL_SO'] = 0
+                df['Entry_fee'] = 0
+                df['PPM'] = 2.5
             elif ff[:-8] == 'TRT':
                 df['Season'] = 2
                 df['Metro_area'] = 1
                 df['WL_SO'] = 1
+                df['Entry_fee'] = 1
+                df['PPM'] = 2.75
             elif ff[:-8] == 'WSER':
                 df['Season'] = 2
                 df['Metro_area'] = 1
                 df['WL_SO'] = 1
+                df['Entry_fee'] = 1
+                df['PPM'] = 4.1
             elif ff[:-8] == 'Zion':
                 df['Season'] = 1
                 df['Metro_area'] = 1
                 df['WL_SO'] = 1
+                df['Entry_fee'] = 1
+                df['PPM'] = 2.5
             elif ff[:-8] == 'GDR':
                 df['Season'] = 1
                 df['Metro_area'] = 1
                 df['WL_SO'] = 1
+                df['Entry_fee'] = 1
+                df['PPM'] = 3.16
 
             df.to_csv('cleaned_races/%s' % ff)
 
