@@ -4,7 +4,7 @@
 
 In trail racing there is the common adage of DFL (dead last) is better than a DNF (did not finish) is better than a DNS (did not start). With the increasing popularity and selling out of ultra-distance trail races, many race directors are having difficulties in predicting how many applicants to accept. Sometimes they are resource-constricted and other times permit-constricted on how many racers can start a race. For the purposes of this study, I will be focusing on the “worst of all evils” in trail racing, predicting the DNS rate based on the individual characteristics of racers in the entrant list for a race. Racers don’t like to DNS and neither do the directors. Ultimately, this will allow a race director to allocate their resources more effectively leading up to and on race day. It will also allow the most popular of races to more accurately predict how it can approach “overselling” a race or how many to place on the waitlist.
 
-This is a repo documenting my workflow in modeling this problem. This is evergreen as of November 14, 2016.
+This is a repo documenting my workflow in modeling this problem. This is evergreen as of November 16, 2016.
 
 November 9, 2016:
 * Finished creating python scripts to scrape race results from ultrasignup.com
@@ -43,8 +43,14 @@ November 14, 2016:
 
 November 15, 2016:
 * Trouble-shooting and rebuilding features for input into MVP model
-* Initial look at model with new feature engineering yields ~~0.17~~-0.19 log loss and ROC scores of ~~~0.73-0.74~~ 0.68
+* Initial look at model with new feature engineering yields ~~0.17~~-0.19 log loss and auc scores of ~~~0.73-0.74~~ 0.68
     * New features = race season, race metro area (binary classification), race "prestige" (identified by waitlist/lottery/sell out or not)
 * Reduced feature dimensionality by removing rankings and total # races
       * Improved auc score for RFC to 0.73 (kept runner rank, removed gender and age rank)
+* Added features for price per mile and binary classification for $200 entry fee threshold. 
+* Began grid search optimization on Logistic Regression, Random Forest and Gradient Boosted Classification. 
+      * AUC scores hover in the upper 0.64-0.69 range for optimization runs (including 10-fold cross-validation)
+* Best max AUC scores coming from Random Forest
+
+November 16, 2016:
 
