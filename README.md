@@ -53,4 +53,6 @@ November 15, 2016:
 * Best max AUC scores coming from Random Forest
 
 November 16, 2016:
+* Cleaning up model workflow for final selection (alpha model)
+* Scoping early phase web app for deployment
 
