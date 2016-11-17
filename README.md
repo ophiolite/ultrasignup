@@ -63,3 +63,4 @@ November 17, 2016:
 * Feature engineering column for Finish/DNF rate for each athlete (ignoring DNS due to potential data leakage)
    * Random Forest auc = 0.69, Logistic Regression auc = 0.62, Gradient Boosted Classifier auc = 0.698
 * First pass model to predict finishers vs. DNF/DNS based on athlete features. Random Forest auc = 0.67, Logistic Regression auc = 0.64, Gradient Boosted Classifier auc = 0.66. All using same parameters as the DNS prediction model.
+   * Second pass with some parameter tuning yields LR auc = 0.65, RFC auc = 0.67, GBC auc = 0.68
