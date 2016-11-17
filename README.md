@@ -60,4 +60,5 @@ November 16, 2016:
 
 November 17, 2016:
 * Doing one more round of feature engineering to pull predictive power behind the DNF rates of individual athletes and for the races in general.
+* Feature engineering column for Finish/DNF rate for each athlete (ignoring DNS due to potential data leakage)
 
