@@ -56,4 +56,4 @@ November 16, 2016:
 * Cleaning up model workflow for final selection (alpha model)
 * Working on cost/benefit matrix to quantify value for final model selection
 * Scoping early phase web app for deployment to friends (will contact RDs directly for feedback for beta model deployment)
-
+* First pass profit curves and collated ROC curve plot for final model selection
