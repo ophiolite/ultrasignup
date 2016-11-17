@@ -17,6 +17,7 @@ def race_runner_features(directory1, directory2):
                 race_db['Age_Rank'] = athletes['AgeRank']
                 race_db['Gender_Rank'] = athletes['Rank']
                 race_db['Total_races'] = athletes['race_total']
+                race_db['Success_rate'] = athletes['success_rate']
             else:
                 continue
 

@@ -18,4 +18,4 @@ def feature_dataframe(directory):
     frame.to_csv('athlete_dataframe/concat')
 
 if __name__ == '__main__':
-    feature_dataframe('athlete_features')
+    feature_dataframe('athlete_features2')
