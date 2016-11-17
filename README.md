@@ -57,6 +57,11 @@ November 16, 2016:
 * Working on cost/benefit matrix to quantify value for final model selection
 * Scoping early phase web app for deployment to friends (will contact RDs directly for feedback for beta model deployment)
 * First pass profit curves and collated ROC curve plot for final model selection
+   * Used following values for determinations (open to suggestions and discussion)
+      * TP (predicted DNS) = $250/racer (average 100 mile race entry that can be resold)
+      * TN (predicted show) = $100/racer (may return if DNF or suggest race to others if they enjoyed course)
+      * FP (predicted DNS, but showed) = -$100 (ended up needing more supplies, doesn't include potential reputation risk)
+      * FN (predicted show, but didn't) = $0 (already bought supplies)
 
 November 17, 2016:
 * Doing one more round of feature engineering to pull predictive power behind the DNF rates of individual athletes and for the races in general.
