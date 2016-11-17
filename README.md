@@ -69,6 +69,6 @@ November 17, 2016:
    * Random Forest auc = 0.69, Logistic Regression auc = 0.62, Gradient Boosted Classifier auc = 0.698
    * Updated - Random Forect auc = 0.690 (unchanged), Logistic Regression auc = 0.62 (unchanged), Gradient Boosted Classifier auc = 0.701
 * First pass model to predict finishers vs. DNF/DNS based on athlete features. Random Forest auc = 0.67, Logistic Regression auc = 0.64, Gradient Boosted Classifier auc = 0.66. All using same parameters as the DNS prediction model.
+   * Second pass with some parameter tuning yields LR auc = 0.663, RFC auc = 0.67, GBC auc = 0.68 
    * Added back in total races for athlete into prediction dataframe
       * LR auc = 0.663, RF auc = 0.688, GBC auc = 0.707
-   * Second pass with some parameter tuning yields LR auc = 0.663, RFC auc = 0.67, GBC auc = 0.68
