@@ -4,7 +4,7 @@
 
 In trail racing there is the common adage of DFL (dead last) is better than a DNF (did not finish) is better than a DNS (did not start). With the increasing popularity and selling out of ultra-distance trail races, many race directors are having difficulties in predicting how many applicants to accept. Sometimes they are resource-constricted and other times permit-constricted on how many racers can start a race. For the purposes of this study, I will be focusing on the “worst of all evils” in trail racing, predicting the DNS rate based on the individual characteristics of racers in the entrant list for a race. Racers don’t like to DNS and neither do the directors. Ultimately, this will allow a race director to allocate their resources more effectively leading up to and on race day. It will also allow the most popular of races to more accurately predict how it can approach “overselling” a race or how many to place on the waitlist.
 
-This is a repo documenting my workflow in modeling this problem. This is evergreen as of November 17, 2016.
+This is a repo documenting my workflow in modeling this problem. This is evergreen as of November 18, 2016.
 
 November 9, 2016:
 * Finished creating python scripts to scrape race results from ultrasignup.com
@@ -84,3 +84,7 @@ November 17, 2016:
 * y(finished) = 0 / 1 (0 = DNF but started, 1 = Finished)
 * X = age, runner rank (overall), season of race, total races, success rate, metro area, waitlist/sell out, price per mile, athlete success metric ((total races finished / total DNF) * total races), gender 
 
+November 18, 2016:
+* Working script to pull current data from 2017 Western States 100 lottery to use for future updating work (using lottery registration date as a predictor of eventual race status)
+* Test model on unseen race data from an unrelated race on ultrasignup to assess model performance
+* Continue scoping webapp deployment options
