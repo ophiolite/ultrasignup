@@ -88,4 +88,7 @@ November 18, 2016:
 * Working script to pull current data from 2017 Western States 100 lottery to use for future updating work (using lottery registration date as a predictor of eventual race status)
 * Test model on unseen race data from an unrelated race on ultrasignup to assess model performance
    * Scraped 2016 Brazos Bend 100 data for unrelated race cross-validation
+   * Model performed moderately well with a Gradient Boosted Classifier, not very well using Logitic Regression or Random Forest models
 * Continue scoping webapp deployment options
+   * Identified template for webapp and working on getting it functional
+   * Will host in conjunction with my personal blog
