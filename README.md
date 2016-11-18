@@ -89,6 +89,7 @@ November 18, 2016:
 * Test model on unseen race data from an unrelated race on ultrasignup to assess model performance
    * Scraped 2016 Brazos Bend 100 data for unrelated race cross-validation
    * Model performed moderately well with a Gradient Boosted Classifier, not very well using Logitic Regression or Random Forest models
+   * GBC predicted 53/61 DNF's for 2016 BB100 accurately. Less accurate in predicting finishers currently.
 * Continue scoping webapp deployment options
    * Identified template for webapp and working on getting it functional
    * Will host in conjunction with my personal blog
