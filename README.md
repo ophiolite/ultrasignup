@@ -87,4 +87,5 @@ November 17, 2016:
 November 18, 2016:
 * Working script to pull current data from 2017 Western States 100 lottery to use for future updating work (using lottery registration date as a predictor of eventual race status)
 * Test model on unseen race data from an unrelated race on ultrasignup to assess model performance
+   * Scraped 2016 Brazos Bend 100 data for unrelated race cross-validation
 * Continue scoping webapp deployment options
