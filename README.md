@@ -72,6 +72,7 @@ November 17, 2016:
    * Second pass with some parameter tuning yields LR auc = 0.663, RFC auc = 0.67, GBC auc = 0.68 
    * Added back in total races for athlete into prediction dataframe
       * LR auc = 0.663, RF auc = 0.688, GBC auc = 0.707
+* Identified some potential data leakage in features and fixed appropriately. Decreased log loss values considerably.
 
 # Summary of features as of November 17th
 
