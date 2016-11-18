@@ -22,7 +22,7 @@ def athlete_features(directory1, directory2):
                         print f
                         results = pd.read_csv(directory2 + '/' + f)
                         # if results.status.value_counts()
-                        for entry in results.status:
+                        #for entry in results.status:
                             # if results.status.values()[-1]:
                             #     results['status'] = results['status']
                             # if len(results.status.value_counts()) > 0:
@@ -43,18 +43,26 @@ def athlete_features(directory1, directory2):
                             #     clean['DNS'] = 0
                             # else:
                             #     continue
-                            for each in results:
-                                clean['race_total'] = results['status'].count()
+                            #for each in results:
+                            #    clean['race_total'] = results['status'].count()
                         for each in clean.Id:
+                            if -1 in results.status.value_counts():
+                                TBR = results.status.value_counts()[-1]
+                            else:
+                                TBR = 0.
                             if 1 in results.status.value_counts():
                                 if 3 not in results.status.value_counts() and 2 in results.status.value_counts():
+                                    clean['race_total'] = results['status'].count() - TBR
                                     clean['success_rate'] = (results.status.value_counts()[1]) / clean.race_total
                                 elif 3 in results.status.value_counts():
                                     DNS = results.status.value_counts()[3]
-                                    clean['success_rate'] = (results.status.value_counts()[1]) / (clean.race_total - DNS)
+                                    clean['race_total'] = results['status'].count() - (DNS + TBR)
+                                    clean['success_rate'] = (results.status.value_counts()[1]) / (clean.race_total)
                                 else:
+                                    clean['race_total'] = results['status'].count() - TBR
                                     clean['success_rate'] = 1.
                             else:
+                                clean['race_total'] = results['status'].count() - TBR
                                 clean['success_rate'] = 0.
                         clean.to_csv('athlete_features2/%s' % ff)
                     else:
