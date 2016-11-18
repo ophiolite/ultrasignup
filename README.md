@@ -72,13 +72,14 @@ November 17, 2016:
    * Second pass with some parameter tuning yields LR auc = 0.663, RFC auc = 0.67, GBC auc = 0.68 
    * Added back in total races for athlete into prediction dataframe
       * LR auc = 0.663, RF auc = 0.688, GBC auc = 0.707
+
 # Summary of features as of November 17th
 
 # DNS Prediction Model:
 * y(DNS) = 0 / 1 (0 = started, 1 = DNS)
-* X = age, runner rank (overall), season of race (spring, summer, fall, winter), metro area (w/in 2 hour drive of metro area), waitlist/sell out (1 = sells out/waitlist/lottery, 0 = doesn't fill), entry fee ($200 threshold), price per mile, athlete success rate (total races finished / total DNF), gender
+* X = age, runner rank (overall), season of race (spring, summer, fall, winter), metro area (w/in 2 hour drive of metro area), waitlist/sell out (1 = sells out/waitlist/lottery, 0 = doesn't fill), entry fee ($200 threshold), price per mile, athlete success metric ((total races finished / total DNF) * total races), gender
 
 # Finishing Prediction Model:
 * y(finished) = 0 / 1 (0 = DNF but started, 1 = Finished)
-* X = age, runner rank (overall), season of race, total races, success rate, metro area, waitlist/sell out, price per mile, athlete success rate, gender 
+* X = age, runner rank (overall), season of race, total races, success rate, metro area, waitlist/sell out, price per mile, athlete success metric ((total races finished / total DNF) * total races), gender 
 
