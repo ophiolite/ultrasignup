@@ -3,9 +3,7 @@ import numpy as np
 from sklearn.cross_validation import train_test_split
 
 class Model_setup(object):
-    def __init__(self):
-        pass
-
+    
     def clean_dataframe(filename):
         '''INPUT: .csv file with feature data
         OUTPUT: dataframe for model analysis'''
