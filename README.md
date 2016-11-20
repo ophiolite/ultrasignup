@@ -106,3 +106,4 @@ November 19, 2016:
 November 20, 2016:
 * Continue working front end of webapp
 * Early freeze of both models (DNS & DNF) for incorporation into webapp
+* Writing python scripts for creating and pickling models
