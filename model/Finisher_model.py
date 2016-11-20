@@ -2,7 +2,7 @@ import model.Model_setup as data
 from sklearn.cross_validation import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier as GBC
 
-class DNS_model(object):
+class Finisher_model(object):
     def __init__(self):
         self.df = data.clean_dataframe('../ult_sign_scrape/race_master/master_database_fe4.csv')
         self.X_train = None
@@ -14,9 +14,9 @@ class DNS_model(object):
         '''INPUT: .csv of final dataframe
         cleans up and sets up model for training
         OUTPUT: None'''
-        y = df.pop('status_coded')
+        y = df.pop('DNF_DNS_coded')
         X = df.drop(['gender', 'participant_id', 'race_name', 'race_id'\
-                     , 'gender_M', 'DNF_DNS_coded', 'success_metric'], axis=1)
+                 , 'gender_M', 'status_coded', 'success_metric'], axis=1)
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.3)
 
     def final_model(self):
@@ -30,5 +30,5 @@ class DNS_model(object):
             max_features=11, verbose=0, max_leaf_nodes=None, warm_start=False, \
             presort='auto')
             model.fit(self.X_train, self.y_train)
-            filename = 'DNS_model.pkl'
+            filename = 'Finish_model.pkl'
             pickle.dump(model, open(filename, 'wb'))
