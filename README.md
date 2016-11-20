@@ -98,3 +98,8 @@ November 19, 2016:
 * Working on getting webapp designed with Flask using a bootstrap template.
 * Simple template updated with a general skeleton of the design
 * Identifying ways to plug in blog to webapp
+* Decided to give a quick try to fit data to Gaussian Naive Bayes for fun. 
+   * Out of box performance = 0.63 auc score for DNS prediction
+      * Performs poorly on newly added races (0.55 auc score)
+   * Out of box performane = 0.64 for DNF prediction
+   
