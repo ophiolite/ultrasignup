@@ -111,3 +111,4 @@ November 20, 2016:
 November 21, 2016:
 * Completed model pickling
 * Continue working on functionality of webapp
+* Working on integrating models into webapp with user input
