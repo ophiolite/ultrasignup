@@ -17,10 +17,11 @@ class Model_setup(object):
         ##Create gender dummy variables for model
         gender_dummies = pd.get_dummies(cleaned_data.gender, prefix='gender')
         cleaned_data = cleaned_data.join(gender_dummies)
-        cleaned_data["status_coded"] = coding(cleaned_data["status"], {'1':0,'2':0, '3':1})
-        cleaned_data['DNF_DNS_coded'] = coding(cleaned_data["status"], {'1':1,'2':0, '3':0})
+        cleaned_data["status_coded"] = Model_setup.coding(cleaned_data["status"], {'1':0,'2':0, '3':1})
+        cleaned_data['DNF_DNS_coded'] = Model_setup.coding(cleaned_data["status"], {'1':1,'2':0, '3':0})
         return cleaned_data
 
+    @staticmethod
     def coding(col, codeDict):
         '''Consolidate all starts (code DNF with finishers) for modeling'''
         colCoded = pd.Series(col, copy=True)
