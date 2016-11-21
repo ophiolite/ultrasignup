@@ -1,9 +1,10 @@
 import pandas as pd
 import numpy as np
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 
 class Model_setup(object):
-    
+
+    @staticmethod
     def clean_dataframe(filename):
         '''INPUT: .csv file with feature data
         OUTPUT: dataframe for model analysis'''
@@ -18,7 +19,7 @@ class Model_setup(object):
         cleaned_data = cleaned_data.join(gender_dummies)
         cleaned_data["status_coded"] = coding(cleaned_data["status"], {'1':0,'2':0, '3':1})
         cleaned_data['DNF_DNS_coded'] = coding(cleaned_data["status"], {'1':1,'2':0, '3':0})
-
+        return cleaned_data
 
     def coding(col, codeDict):
         '''Consolidate all starts (code DNF with finishers) for modeling'''

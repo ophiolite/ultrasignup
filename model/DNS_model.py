@@ -1,10 +1,15 @@
-import model.Model_setup as data
-from sklearn.cross_validation import train_test_split
+import Model_setup as data
+from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier as GBC
+import pickle
+import pandas as pd
+import numpy as np
 
 class DNS_model(object):
-    def __init__(self):
-        self.df = data.clean_dataframe('../ult_sign_scrape/race_master/master_database_fe4.csv')
+
+    def __init__(self, filename):
+        self.df = data.clean_dataframe(filename)
+        print 'I got here2'
         self.X_train = None
         self.y_train = None
         self.X_test = None
@@ -33,5 +38,8 @@ class DNS_model(object):
             filename = 'DNS_model.pkl'
             pickle.dump(model, open(filename, 'wb'))
 
-if __name__ = 'main':
-    DNS_model()
+if __name__ == '__main__':
+    filename = '../ult_sign_scrape/race_master/master_database_fe4.csv'
+    dnsmodelinstance = DNS_model(filename)
+    dnsmodelinstance.model_setup()
+    dnsmodelinstance.final_model()
