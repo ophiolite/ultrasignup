@@ -109,5 +109,5 @@ November 20, 2016:
 * Writing python scripts for creating and pickling models
 
 November 21, 2016:
-* Complete model pickling
+* Completed model pickling
 * Continue working on functionality of webapp
