@@ -19,8 +19,10 @@ class Finisher_model(object):
         OUTPUT: None'''
         y = self.df.pop('DNF_DNS_coded')
         X = self.df.drop(['gender', 'participant_id', 'race_name', 'race_id'\
-                 , 'gender_M', 'status_coded', 'success_metric'], axis=1)
+                 , 'gender_M', 'status_coded', 'success_metric', 'status'], axis=1)
+
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.3)
+        print self.X_train.info()
 
     def final_model(self):
             '''INPUT: GBC model
