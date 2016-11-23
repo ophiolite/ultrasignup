@@ -116,3 +116,8 @@ November 21, 2016:
 November 22, 2016:
 * Working on backend of webapp to get everything connected
 * Prepping slides for presentation of MVP
+* Worked towards getting webapp plumbed for model inputs. Used average values per 
+age group for non-directly entered values into form.
+* Made pickled files for X and y test data for final pickled DNS model statistics
+calculations
+* Still need to flesh out JS/Ajax calls to server
