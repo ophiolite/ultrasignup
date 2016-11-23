@@ -49,6 +49,26 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: inline-block;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
   </style>
 </head>
 <body>
@@ -94,16 +114,17 @@
   <h3 class="margin">Athletes: Just for Fun</h3>
 
   <p>Want to know your probability to finish popular ultramarathons? I'm optimizing predictive models for that...</p>
-  <div class="btn-group">
+  <div class="form-control">
     <ul class="col-xs-2">
     <label for="ex1">Age</label>
-    <input class="form-control" id="ex1" type="text">
-  </ul>
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Gender<span class="caret"></span></button>
+    <input "form-control" id="ex1" type="text"></ul>
+<div class="dropdown-toggle">
+  <button type="button"  data-toggle="dropdown">Gender<span class="caret"></span></button>
   <ul class="dropdown-menu" role="menu">
     <li><a href="#">M</a></li>
     <li><a href="#">F</a></li></ul>
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    <ul class="btn btn-primary dropdown-toggle">
+  <button type="button" data-toggle="dropdown">
    Race <span class="caret"></span></button>
    <ul class="dropdown-menu" role="menu">
      <li><a href="#">Western States 100</a></li>
@@ -117,7 +138,7 @@
      <li><a href="#">Sean O'Brien 100k</a></li>
      <li><a href="#">Tahoe Rim Trail 100
      <li><a href="#">Zion 100</a></li></a></li>
-   </ul>
+   </ul></ul>
    <button type="button" class="btn btn-primary" glyphicon glyphicon-search><span class="glyphicon glyphicon-search"></span>Predict My Success</button>
  </div>
 
