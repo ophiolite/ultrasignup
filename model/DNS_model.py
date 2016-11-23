@@ -36,7 +36,11 @@ class DNS_model(object):
             presort='auto')
             model.fit(self.X_train, self.y_train)
             filename = 'DNS_model.pkl'
+            X_test = 'X_test.pkl'
+            y_test = 'y_test.pkl'
             pickle.dump(model, open(filename, 'wb'))
+            pickle.dump(self.X_test, open(X_test, 'wb'))
+            pickle.dump(self.y_test, open(y_test, 'wb'))
 
 if __name__ == '__main__':
     filename = '../ult_sign_scrape/race_master/master_database_fe4.csv'
