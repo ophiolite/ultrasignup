@@ -40,7 +40,7 @@ def race_dir_button():
 def Gender_F():
     '''Takes M/F entry in json form from webapp and converts returns 0/1'''
     gender = pd.read_json(gender)
-    if ans == 'M':
+    if ans == 'Male':
         Gender_F = 0.
     else:
         Gender_F = 1.
@@ -124,10 +124,10 @@ def send_file(path):
 
 @app.route('/athlete_proba', methods=['POST'])
 def Finish_proba():
-    athlete_answers = request.json
-    age, gender, race = (athlete_answers[0],
-                                      athlete_answers[1],
-                                      athlete_answers[2])
+    request_df = pd.DataFrame(json_request)
+    age, gender, race = (request_df['value'][0],
+                                      request_df['value'][1],
+                                      request_df['value'][2])
     age_factors = age_factors(age)
     gender_factors = gender_factors(gender)
     race_factors = race_factors(race)
