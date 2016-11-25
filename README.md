@@ -127,5 +127,5 @@ November 23, 2016:
 * Prepping slides for presentation of MVP
 
 November 25, 2016:
-* Cleaning up API scripting work for interpreting json calls from webapp.
+* Cleaning up API scripting work for interpreting and returning json calls from/to webapp.
 * #optoutside for the afternoon
