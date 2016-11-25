@@ -133,10 +133,10 @@ def Finish_proba():
     gender_f = gender_factors(gender)
     race_f = race_factors(race)
 
-    answer_list = [age_factors['Age'], age_factors['runner_rank'], race_factors['Season'], \
-    race_factors['Metro_area'], race_factors['WL_SO'], race_factors['Entry_fee'], \
-    race_factors['PPM'], age_factors['Age_Rank'], age_factors['Gender_Rank'], \
-    race_factors['Total_races'], age_factors['Success_rate'], gender_factors]
+    answer_list = [age_f['Age'], age_f['runner_rank'], race_f['Season'], \
+    race_f['Metro_area'], race_f['WL_SO'], race_f['Entry_fee'], \
+    race_f['PPM'], age_f['Age_Rank'], age_f['Gender_Rank'], \
+    race_f['Total_races'], age_f['Success_rate'], gender_f]
 
     probas = Finish_model.predict_proba(answer_list)
 
