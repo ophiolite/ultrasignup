@@ -129,9 +129,9 @@ def Finish_proba():
     age, gender, race = (request_df['value'][0],
                                       request_df['value'][1],
                                       request_df['value'][2])
-    age_factors = age_factors(age)
-    gender_factors = gender_factors(gender)
-    race_factors = race_factors(race)
+    age_f = age_factors(age)
+    gender_f = gender_factors(gender)
+    race_f = race_factors(race)
 
     answer_list = [age_factors['Age'], age_factors['runner_rank'], race_factors['Season'], \
     race_factors['Metro_area'], race_factors['WL_SO'], race_factors['Entry_fee'], \
