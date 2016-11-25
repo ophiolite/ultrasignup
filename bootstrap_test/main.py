@@ -4,6 +4,7 @@ import json
 import sys
 import cPickle as pickle
 import pandas as pd
+from sklearn.ensemble import GradientBoostingClassifier
 import requests
 
 app = Flask(__name__)
@@ -15,7 +16,7 @@ def load_model(filename):
         model = pickle.load(f)
     return model
 
-def race_dir_button(filename):
+def race_dir_button():
     '''When clicked, allows for model stats to pop up for the DNS model'''
     ##May just bypass the pickled model for this one and just pop up the model
     ##statistics calculated by the holdout data and just return the numeric values
@@ -136,6 +137,10 @@ def Finish_proba():
 
     return jsonify(probas[0][1]) ##returns the numeric probability of success for selected race
 
+@app.route('/race_director', methods=['POST'])
+def DNS_stats():
+    return race_dir_button()
+
 @app.route('/blog', methods=['GET'])
 def index():
     return render_template('blog.html')
@@ -143,8 +148,8 @@ def index():
 
 
 if __name__ == '__main__':
-    filename = '../model/DNS_model.pkl'
+    #filename = '../model/DNS_model.pkl'
     filename2 = '../model/Finish_model.pkl'
-    DNS_model = load_model(filename)
+    #DNS_model = load_model(filename)
     Finish_model = load_model(filename2)
     app.run()
