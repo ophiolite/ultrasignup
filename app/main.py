@@ -22,11 +22,12 @@ def race_dir_button():
     ##statistics calculated by the holdout data and just return the numeric values
 
     ##If time allows, have a dropdown to show the results of the BB100 hold out test
-    #DNS_model.predict_proba()
-    AUC_score = 0.681
-    accuracy_score = 0.956
-    acurrate_show = 'Successfully predicted 3015 out of 3016 runners who showed'
-    return jsonify(AUC_score, accuracy_score, accurate_show) ##return when button clicked
+    # #DNS_model.predict_proba()
+    # AUC_score = ''
+    # accuracy_score = '0.956'
+    # accurate_show = 'Successfully predicted 3015 out of 3016 runners who showed'
+    predict = 'AUC score: 0.681\nAccuracy score:0.956\nSuccessfully predicted 3015 out of 3016 runners who showed'
+    return jsonify(predict) ##return when button clicked
 
 #
 # def parse_athlete_json(answer_list):
