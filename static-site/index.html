@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
+  <title>Endurostew</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="lib/main.js"></script>
   <style>
   body {
       font: 20px Montserrat, sans-serif;
@@ -105,8 +106,11 @@
 <div class="container-fluid bg-2 text-center">
   <h3 class="margin">Race Directors Services</h3>
   <p>Predictive modeling to optimize resources based on who will show</p>
-    <button type="button" class="btn btn-primary">Current Model Statistics</button>
-  </a>
+    <form id="directors-form" class="form-group">
+    <button id="submit" name="submit" class="btn btn-primary">Current Model Statistics</button>
+</form>
+<div id="directors-results" class="col-md-4 hidden">
+</div>
 </div>
 
 <!-- Third Container -->
@@ -114,34 +118,60 @@
   <h3 class="margin">Athletes: Just for Fun</h3>
 
   <p>Want to know your probability to finish popular ultramarathons? I'm optimizing predictive models for that...</p>
-  <div class="form-control">
-    <ul class="col-xs-2">
-    <label for="ex1">Age</label>
-    <input "form-control" id="ex1" type="text"></ul>
-<div class="dropdown-toggle">
-  <button type="button"  data-toggle="dropdown" onclick="myFunction()">Gender<span class="caret"></span></button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="#">M</a></li>
-    <li><a href="#">F</a></li></ul>
-    <ul class="btn btn-primary dropdown-toggle">
-  <button type="button" data-toggle="dropdown" onclick="myFunction()">
-   Race <span class="caret"></span></button>
-   <ul class="dropdown-menu" role="menu">
-     <li><a href="#">Western States 100</a></li>
-     <li><a href="#">Bear 100</a></li>
-     <li><a href="#">Black Canyon 100k</a></li>
-     <li><a href="#">Canyons 100k</a></li>
-     <li><a href="#">Eastern States 100</a></li>
-     <li><a href="#">FatDog 120</a></li>
-     <li><a href="#">Javelina Jundred</a></li>
-     <li><a href="#">San Diego 100</a></li>
-     <li><a href="#">Sean O'Brien 100k</a></li>
-     <li><a href="#">Tahoe Rim Trail 100</a></li>
-     <li><a href="#">Zion 100</a></li>
-   </ul></ul>
-   <button type="button" class="btn btn-primary" glyphicon glyphicon-search><span class="glyphicon glyphicon-search"></span>Predict My Success</button>
- </div>
-</div>
+      <form id="model-form" class="form-inline">
+      <fieldset>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <div class="col-md-1">
+        <label class="control-label sr-only" for="age">Age</label>
+        <input id="age" name="age" placeholder="Age" class="form-control input-md" required="true" type="text">
+    </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="form-group">
+          <div class="col-md-1">
+        <label class="control-label sr-only" for="gender">Gender</label>
+          <select id="gender" name="gender" class="form-control">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+      </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="form-group">
+          <div class="col-md-2">
+        <label class="control-label sr-only" for="race">Race</label>
+          <select id="race" name="race" class="form-control">
+            <option value="Bear 100">Bear 100</option>
+            <option value="Black Canyon 100k">Black Canyon 100k</option>
+            <option value="Canyons 100k">Canyons 100k</option>
+            <option value="Eastern States 100">Eastern States 100</option>
+            <option value="FatDog 120">FatDog 120</option>
+            <option value="Javelina Jundred">Javelina Jundred</option>
+            <option value="San Diego 100">San Diego 100</option>
+            <option value="Sean O'Brien 100k">Sean O'Brien 100k</option>
+            <option value="Tahoe Rim Trail 100">Tahoe Rim Trail 100</option>
+            <option value="Western States 100">Western States 100</option>
+            <option value="Zion 100">Zion 100</option>
+          </select>
+      </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+          <div class="col-md-1">
+        <label class="control-label sr-only" for="submit"></label>
+          <button id="submit" name="submit" class="btn btn-primary">Submit <i class="glyphicon glyphicon-search"></i></button>
+      </div>
+      </div>
+  </div>
+      </fieldset>
+      </form>
+      <div id="model-results" class="col-md-4 hidden">
+      </div>
 </div>
 
 <!-- Fourth Container (Grid) -->
