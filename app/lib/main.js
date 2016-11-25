@@ -9,12 +9,16 @@ $(document).ready(function() {
             type        : 'POST',
             url         : '/race_director',
             data        : 'formData',
-            dataType    : 'json',
-            encode      : true
+            dataType    : 'html',
+            encode      : true,
+            success: function(response) { // on success
+                //console.log("Results: " + response);
+                $('#directors-results').html(response);
+            }
         })
 
         .done(function(data) {
-            console.log(data);
+            //console.log(data);
         });
 
     event.preventDefault();
@@ -42,14 +46,18 @@ $(document).ready(function() {
             contentType : "application/json; charset=utf-8",
             url         : '/athlete_proba', // the url where we want to POST
             data        : formData, // our data object
-            dataType    : 'json', // what type of data do we expect back from the server
-                        encode          : true
+            dataType    : 'html', // what type of data do we expect back from the server
+            encode      : true,
+            success: function(response) { // on success
+                //console.log("Results: " + response);
+                $('#model-results').html(response);
+                }
         })
             // using the done promise callback
             .done(function(data) {
 
                 // log data to the console so we can see
-                console.log(data);
+                //console.log(data);
 
                 // here we will handle errors and validation messages
             });
