@@ -27,24 +27,27 @@ def race_dir_button(filename):
     acurrate_show = 'Successfully predicted 3015 out of 3016 runners who showed'
     return jsonify(AUC_score, accuracy_score, accurate_show) ##return when button clicked
 
-
-def parse_athlete_json(answer_list):
-    '''Takes answers from form on app and makes list for entry into DNF modeling'''
-##button entries include age, gender, and race
-##extrapolate from race: Season, Metro_area, WL_SO, Entry_fee, PPM
-##gender/age group averages for: runner_rank, Age_Rank, Gender_Rank, Success_rate, Total_races
-    '''Need to change reader from list to numpy array'''
-    pass
+#
+# def parse_athlete_json(answer_list):
+#     '''Takes answers from form on app and makes list for entry into DNF modeling'''
+# ##button entries include age, gender, and race
+# ##extrapolate from race: Season, Metro_area, WL_SO, Entry_fee, PPM
+# ##gender/age group averages for: runner_rank, Age_Rank, Gender_Rank, Success_rate, Total_races
+#     '''Need to change reader from list to numpy array'''
+#     pass
 
 def Gender_F():
+    '''Takes M/F entry in json form from webapp and converts returns 0/1'''
     gender = pd.read_json(gender)
     if ans == 'M':
         Gender_F = 0.
     else:
-        Gender_F = 1
+        Gender_F = 1.
     return Gender_F
 
 def race_factors():
+    '''Takes race from dropdown on webapp in json form and returns dataframe
+    with race-specific modeling parameters'''
     race = pd.read_json(race_factors)
     race_fields = ['Season', 'Metro_area', 'WL_SO', 'Entry_fee', 'PPM']
     if race == 'Bear 100':
@@ -75,33 +78,34 @@ def race_factors():
     return race_factors
 
 def age_factors(age):
-
-        try:
-            age = pd.read_json(int(age))
-        except ValueError:
-            print("Age is but a number, dude!")
-        age_fields = ['Age', 'runner_rank', 'Age_Rank', 'Gender_Rank', 'Success_rate', 'Total_races']
-        if age < 20:
-            age_features = {Age: age, runner_rank: 70.3851, Age_Rank: 0.7538, \
-            Gender_Rank: 0.6842, Success_rate, 0.900, Total_races: 11.515}
-        elif age >= 20 and age < 30:
-            age_features = {Age: age, runner_rank: 74.5336, Age_Rank, 0.7254, \
-            Gender_Rank: 0.6560, Success_rate: 0.8798, Total_races, 10.286}
-        elif age >= 30 and age < 40:
-            age_features = {Age:age, runner_rank: 72.3374, Age_Rank: 0.7319, \
-            Gender_Rank: 0.6689, Success_rate: 0.8867, Total_races: 11.352}
-        elif age >= 40 and age < 50:
-            age_features = {Age: age, runner_rank: 69.9372, Age_Rank: 0.7308, \
-            Gender_Rank: 0.6668, Success_rate, 0.8753, Total_races: 11.191}
-        elif age >= 50 and age < 60:
-            age_features = {Age: age, runner_rank: 66.6021, Age_Rank: 0.7339, \
-            Gender_Rank: 0.6733, Success_rate: 0.8837, Total_races: 11.092}
-        elif age >= 60 and age < 70:
-            age_features = {Age: age, runner_rank: 61.5856, Age_Rank: 0.7213, \
-            Gender_Rank: 0.6683, Success_rate: 0.8721, Total_races: 10.311}
-        elif age > 70:
-            age_features = {Age: age, runner_rank: 58.3583, Age_Rank: 0.7308, \
-            Gender_Rank: 0.6395, Success_rate: 0.8579, Total_races = 10.080}
+    '''Takes in numeric age from webapp form and evaluates and populates age-specific
+    features for the athlete. Outputs dataframe.'''
+    try:
+        age = pd.read_json(int(age))
+    except ValueError:
+        print("Age is but a number, dude!")
+    age_fields = ['Age', 'runner_rank', 'Age_Rank', 'Gender_Rank', 'Success_rate', 'Total_races']
+    if age < 20:
+        age_features = {Age: age, runner_rank: 70.3851, Age_Rank: 0.7538, \
+        Gender_Rank: 0.6842, Success_rate, 0.900, Total_races: 11.515}
+    elif age >= 20 and age < 30:
+        age_features = {Age: age, runner_rank: 74.5336, Age_Rank, 0.7254, \
+        Gender_Rank: 0.6560, Success_rate: 0.8798, Total_races, 10.286}
+    elif age >= 30 and age < 40:
+        age_features = {Age:age, runner_rank: 72.3374, Age_Rank: 0.7319, \
+        Gender_Rank: 0.6689, Success_rate: 0.8867, Total_races: 11.352}
+    elif age >= 40 and age < 50:
+        age_features = {Age: age, runner_rank: 69.9372, Age_Rank: 0.7308, \
+        Gender_Rank: 0.6668, Success_rate, 0.8753, Total_races: 11.191}
+    elif age >= 50 and age < 60:
+        age_features = {Age: age, runner_rank: 66.6021, Age_Rank: 0.7339, \
+        Gender_Rank: 0.6733, Success_rate: 0.8837, Total_races: 11.092}
+    elif age >= 60 and age < 70:
+        age_features = {Age: age, runner_rank: 61.5856, Age_Rank: 0.7213, \
+        Gender_Rank: 0.6683, Success_rate: 0.8721, Total_races: 10.311}
+    elif age > 70:
+        age_features = {Age: age, runner_rank: 58.3583, Age_Rank: 0.7308, \
+        Gender_Rank: 0.6395, Success_rate: 0.8579, Total_races = 10.080}
     age_factors = pd.concat([race_features,pd.DataFrame(columns=age_fields)])
     return age_factors
 
@@ -123,9 +127,10 @@ def Finish_proba():
     gender_factors = gender_factors(gender)
     race_factors = race_factors(race)
     #profile = parse_athlete_json(athlete_answers)
-    answer_list = [Age, runner_rank, Season, Metro_area, \
-    WL_SO, Entry_fee, PPM, Age_Rank, Gender_Rank, \
-    Total_races, Success_rate, Gender_F]
+    answer_list = [age_factors['Age'], age_factors['runner_rank'], race_factors['Season'], \
+    race_factors['Metro_area'], race_factors['WL_SO'], race_factors['Entry_fee'], \
+    race_factors['PPM'], age_factors['Age_Rank'], age_factors['Gender_Rank'], \
+    race_factors['Total_races'], age_factors['Success_rate'], Gender_F]
     probas = Finish_model.predict_proba(answer_list)
     return jsonify(probas[0][1]) ##returns the numeric probability of success for selected race
 
