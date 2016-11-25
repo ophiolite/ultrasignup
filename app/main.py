@@ -149,7 +149,7 @@ def index():
 
 if __name__ == '__main__':
     #filename = '../model/DNS_model.pkl'
-    filename2 = '../model/Finish_model.pkl'
+    filename2 = 'model/Finish_model.pkl'
     #DNS_model = load_model(filename)
     Finish_model = load_model(filename2)
     app.run()
