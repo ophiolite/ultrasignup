@@ -23,6 +23,8 @@ $(document).ready(function() {
     // process the model form
     $('#model-form').submit(function(event) {
 
+        console.log("Model form submitted");
+
         // get the form data
         // there are many ways to get this data using jQuery (you can use the class or id also)
         var formData = {
@@ -34,7 +36,7 @@ $(document).ready(function() {
         // process the form
         $.ajax({
             type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-            url         : 'https://app-name.heroku.com/endpoint', // the url where we want to POST
+            url         : 'http://localhost:5000/athlete_proba', // the url where we want to POST
             data        : formData, // our data object
             dataType    : 'json', // what type of data do we expect back from the server
                         encode          : true
