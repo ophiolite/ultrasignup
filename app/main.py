@@ -139,8 +139,11 @@ def Finish_proba():
     age_f['Total_races'], age_f['Success_rate'], gender_f]
 
     probas = Finish_model.predict_proba(answer_list)
-
-    return jsonify(probas[0][1]) ##returns the numeric probability of success for selected race
+    finish_proba = (probas[0][1]) * 100.
+    round_prob = "%.2f" % finish_proba
+    statement = 'How cool?!? You have a ' + round_prob + '%'+' chance of finishing, ' + race + \
+    '\n For Entertainment Purposes Only: You are a badass even for making it to the start!'
+    return jsonify(statement) ##returns the numeric probability of success for selected race
 
 @app.route('/race_director', methods=['POST'])
 def DNS_stats():
