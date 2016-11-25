@@ -88,16 +88,16 @@ def age_factors(age):
 
     if age < 20:
         age_features = {Age: [age], runner_rank: [70.3851], Age_Rank: [0.7538], \
-        Gender_Rank: [0.6842], Success_rate, [0.900], Total_races: [11.515]}
+        Gender_Rank: [0.6842], Success_rate: [0.900], Total_races: [11.515]}
     elif age >= 20 and age < 30:
-        age_features = {Age: [age], runner_rank: [74.5336], Age_Rank, [0.7254], \
-        Gender_Rank: [0.6560], Success_rate: [0.8798], Total_races, [10.286]}
+        age_features = {Age: [age], runner_rank: [74.5336], Age_Rank: [0.7254], \
+        Gender_Rank: [0.6560], Success_rate: [0.8798], Total_races: [10.286]}
     elif age >= 30 and age < 40:
         age_features = {Age:[age], runner_rank: [72.3374], Age_Rank: [0.7319], \
         Gender_Rank: [0.6689], Success_rate: [0.8867], Total_races: [11.352]}
     elif age >= 40 and age < 50:
         age_features = {Age: [age], runner_rank: [69.9372], Age_Rank: [0.7308], \
-        Gender_Rank: [0.6668], Success_rate, [0.8753], Total_races: [11.191]}
+        Gender_Rank: [0.6668], Success_rate: [0.8753], Total_races: [11.191]}
     elif age >= 50 and age < 60:
         age_features = {Age: [age], runner_rank: [66.6021], Age_Rank: [0.7339], \
         Gender_Rank: [0.6733], Success_rate: [0.8837], Total_races: [11.092]}
@@ -106,7 +106,7 @@ def age_factors(age):
         Gender_Rank: [0.6683], Success_rate: [0.8721], Total_races: [10.311]}
     elif age > 70:
         age_features = {Age: [age], runner_rank: [58.3583], Age_Rank: [0.7308], \
-        Gender_Rank: [0.6395], Success_rate: [0.8579], Total_races = [10.080]}
+        Gender_Rank: [0.6395], Success_rate: [0.8579], Total_races: [10.080]}
     age_factors = pd.DataFrame(age_features)
     return age_factors
 
@@ -141,9 +141,9 @@ def Finish_proba():
 def DNS_stats():
     return race_dir_button()
 
-@app.route('/blog', methods=['GET'])
-def index():
-    return render_template('blog.html')
+#@app.route('/blog', methods=['GET'])
+#def index():
+#    return render_template('blog.html')
 
 
 
