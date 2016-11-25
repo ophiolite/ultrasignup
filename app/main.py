@@ -112,11 +112,15 @@ def age_factors(age):
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('bootstrap2.html')
+    return render_template('index.html')
 
 @app.route('/images/<path:path>', methods=['GET'])
 def send_image(path):
     return send_from_directory('images', path)
+
+@app.route('/lib/<path:path>', methods=['GET'])
+def send_file(path):
+    return send_from_directory('lib', path)
 
 @app.route('/athlete_proba', methods=['POST'])
 def Finish_proba():
@@ -131,7 +135,7 @@ def Finish_proba():
     answer_list = [age_factors['Age'], age_factors['runner_rank'], race_factors['Season'], \
     race_factors['Metro_area'], race_factors['WL_SO'], race_factors['Entry_fee'], \
     race_factors['PPM'], age_factors['Age_Rank'], age_factors['Gender_Rank'], \
-    race_factors['Total_races'], age_factors['Success_rate'], Gender_F]
+    race_factors['Total_races'], age_factors['Success_rate'], gender_factors]
 
     probas = Finish_model.predict_proba(answer_list)
 
