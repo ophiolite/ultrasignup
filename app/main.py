@@ -78,11 +78,11 @@ def race_factors():
     race_factors = pd.DataFrame(race_features)
     return race_factors
 
-def age_factors(age):
+def age_factors():
     '''Takes in numeric age from webapp form and evaluates and populates age-specific
     features for the athlete. Outputs dataframe.'''
     try:
-        age = pd.read_json(int(age))
+        age = int(age)
     except ValueError:
         print("Age is but a number, dude!")
 
