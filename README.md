@@ -128,4 +128,5 @@ November 23, 2016:
 
 November 25, 2016:
 * Cleaning up API scripting work for interpreting and returning json calls from/to webapp.
+* Working back end of app/static site
 * #optoutside for the afternoon
