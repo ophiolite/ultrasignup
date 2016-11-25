@@ -37,19 +37,18 @@ def race_dir_button():
 #     '''Need to change reader from list to numpy array'''
 #     pass
 
-def Gender_F():
+def Gender_F(gender):
     '''Takes M/F entry in json form from webapp and converts returns 0/1'''
-    gender = pd.read_json(gender)
-    if ans == 'Male':
+
+    if gender == 'Male':
         Gender_F = 0.
     else:
         Gender_F = 1.
     return Gender_F
 
-def race_factors():
+def race_factors(race):
     '''Takes race from dropdown on webapp in json form and returns dataframe
     with race-specific modeling parameters'''
-    race = pd.read_json(race_factors)
 
     if race == 'Bear 100':
         race_features = {'Season': [3], 'Metro_area': [0], 'WL_SO': [1], 'Entry_fee': [1], 'PPM': [2.5]}
@@ -78,7 +77,7 @@ def race_factors():
     race_factors = pd.DataFrame(race_features)
     return race_factors
 
-def age_factors():
+def age_factors(age):
     '''Takes in numeric age from webapp form and evaluates and populates age-specific
     features for the athlete. Outputs dataframe.'''
     try:
@@ -87,26 +86,26 @@ def age_factors():
         print("Age is but a number, dude!")
 
     if age < 20:
-        age_features = {Age: [age], runner_rank: [70.3851], Age_Rank: [0.7538], \
-        Gender_Rank: [0.6842], Success_rate: [0.900], Total_races: [11.515]}
+        age_features = {'Age': [age], 'runner_rank': [70.3851], 'Age_Rank': [0.7538], \
+        'Gender_Rank': [0.6842], 'Success_rate': [0.900], 'Total_races': [11.515]}
     elif age >= 20 and age < 30:
-        age_features = {Age: [age], runner_rank: [74.5336], Age_Rank: [0.7254], \
-        Gender_Rank: [0.6560], Success_rate: [0.8798], Total_races: [10.286]}
+        age_features = {'Age': [age], 'runner_rank': [74.5336], 'Age_Rank': [0.7254], \
+        'Gender_Rank': [0.6560], 'Success_rate': [0.8798], 'Total_races': [10.286]}
     elif age >= 30 and age < 40:
-        age_features = {Age:[age], runner_rank: [72.3374], Age_Rank: [0.7319], \
-        Gender_Rank: [0.6689], Success_rate: [0.8867], Total_races: [11.352]}
+        age_features = {'Age': [age], 'runner_rank': [72.3374], 'Age_Rank': [0.7319], \
+        'Gender_Rank': [0.6689], 'Success_rate': [0.8867], 'Total_races': [11.352]}
     elif age >= 40 and age < 50:
-        age_features = {Age: [age], runner_rank: [69.9372], Age_Rank: [0.7308], \
-        Gender_Rank: [0.6668], Success_rate: [0.8753], Total_races: [11.191]}
+        age_features = {'Age': [age], 'runner_rank': [69.9372], 'Age_Rank': [0.7308], \
+        'Gender_Rank': [0.6668], 'Success_rate': [0.8753], 'Total_races': [11.191]}
     elif age >= 50 and age < 60:
-        age_features = {Age: [age], runner_rank: [66.6021], Age_Rank: [0.7339], \
-        Gender_Rank: [0.6733], Success_rate: [0.8837], Total_races: [11.092]}
+        age_features = {'Age': [age], 'runner_rank': [66.6021], 'Age_Rank': [0.7339], \
+        'Gender_Rank': [0.6733], 'Success_rate': [0.8837], 'Total_races': [11.092]}
     elif age >= 60 and age < 70:
-        age_features = {Age: [age], runner_rank: [61.5856], Age_Rank: [0.7213], \
-        Gender_Rank: [0.6683], Success_rate: [0.8721], Total_races: [10.311]}
-    elif age > 70:
-        age_features = {Age: [age], runner_rank: [58.3583], Age_Rank: [0.7308], \
-        Gender_Rank: [0.6395], Success_rate: [0.8579], Total_races: [10.080]}
+        age_features = {'Age': [age], 'runner_rank': [61.5856], 'Age_Rank': [0.7213], \
+        'Gender_Rank': [0.6683], 'Success_rate': [0.8721], 'Total_races': [10.311]}
+    elif age >= 70:
+        age_features = {'Age': [age], 'runner_rank': [58.3583], 'Age_Rank': [0.7308], \
+        'Gender_Rank': [0.6395], 'Success_rate': [0.8579], 'Total_races': [10.080]}
     age_factors = pd.DataFrame(age_features)
     return age_factors
 
@@ -130,13 +129,13 @@ def Finish_proba():
                                       request_df['value'][1],
                                       request_df['value'][2])
     age_f = age_factors(age)
-    gender_f = gender_factors(gender)
+    gender_f = Gender_F(gender)
     race_f = race_factors(race)
 
-    answer_list = [age_f['Age'], age_f['runner_rank'], race_f['Season'], \
+    answer_list = [age, age_f['runner_rank'], race_f['Season'], \
     race_f['Metro_area'], race_f['WL_SO'], race_f['Entry_fee'], \
     race_f['PPM'], age_f['Age_Rank'], age_f['Gender_Rank'], \
-    race_f['Total_races'], age_f['Success_rate'], gender_f]
+    age_f['Total_races'], age_f['Success_rate'], gender_f]
 
     probas = Finish_model.predict_proba(answer_list)
 
