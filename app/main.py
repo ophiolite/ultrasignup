@@ -124,7 +124,8 @@ def send_file(path):
 
 @app.route('/athlete_proba', methods=['POST'])
 def Finish_proba():
-    request_df = pd.DataFrame(json_request)
+    data = json.loads(request.data)
+    request_df = pd.DataFrame(data)
     age, gender, race = (request_df['value'][0],
                                       request_df['value'][1],
                                       request_df['value'][2])
