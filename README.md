@@ -125,3 +125,7 @@ November 23, 2016:
 * Cleaning up code some
 * Continue with backend work on app
 * Prepping slides for presentation of MVP
+
+November 25, 2016:
+* Cleaning up API scripting work for interpreting json calls from webapp.
+* #optoutside for the afternoon
