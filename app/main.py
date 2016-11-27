@@ -26,8 +26,9 @@ def race_dir_button():
     # AUC_score = ''
     # accuracy_score = '0.956'
     # accurate_show = 'Successfully predicted 3015 out of 3016 runners who showed'
-    predict = 'AUC score: 0.681\nAccuracy score:0.956\nSuccessfully predicted 3015 out of 3016 runners who showed'
-    return jsonify(predict) ##return when button clicked
+    predict = '<p class=\'text-center\'>AUC score: 0.681 Accuracy score:0.956</p><p class=\'text-center\'>Successfully predicted 3015 out of 3016 runners who showed.</p>'
+    #return jsonify(predict) ##return when button clicked
+    return predict
 
 #
 # def parse_athlete_json(answer_list):
@@ -141,9 +142,11 @@ def Finish_proba():
     probas = Finish_model.predict_proba(answer_list)
     finish_proba = (probas[0][1]) * 100.
     round_prob = "%.2f" % finish_proba
-    statement = 'How cool?!? You have a ' + round_prob + '%'+' chance of finishing, ' + race + \
-    '\n For Entertainment Purposes Only: You are a badass even for making it to the start!'
-    return jsonify(statement) ##returns the numeric probability of success for selected race
+    statement = '<p class=\'text-center\'>How cool?!? You have a ' + round_prob + '%'+' chance of finishing ' \
+    + race + '.</p>' + \
+    '<p class=\'text-center\'>For Entertainment Purposes Only: You are a badass even for making it to the start!</p>'
+    #return jsonify(statement) ##returns the numeric probability of success for selected race
+    return statement
 
 @app.route('/race_director', methods=['POST'])
 def DNS_stats():
