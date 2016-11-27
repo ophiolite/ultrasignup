@@ -131,3 +131,8 @@ November 25, 2016:
 * Working back end of app/static site
 * API now works with form submittals for both racer section and race director sections.
 * #optoutside for the afternoon
+
+November 26, 2016:
+* Model Version 1 online after modifications to js to allow for html calls rather than json calls
+* Deployed heroku app: https://ultrasignup-model-app.herokuapp.com/
+* Scoping next phase to migrate to Django for blog incorporation purposes
