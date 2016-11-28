@@ -139,3 +139,7 @@ November 26, 2016:
 
 November 27, 2016:
 * Compiling feedback from social media suggestions for minor edits to Version 1 of app for Capstone presentation
+
+November 28, 2016:
+* Finishing touches on slides
+* Begin migrating webapp to AWS
