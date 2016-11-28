@@ -152,10 +152,13 @@ def Finish_proba():
 def DNS_stats():
     return race_dir_button()
 
-#@app.route('/blog', methods=['GET'])
-#def index():
+# @app.route('/blog', methods=['GET'])
+# def index():
 #    return render_template('blog.html')
 
+@app.route('/about', methods=['GET'])
+def about():
+   return render_template('about.html')
 
 
 if __name__ == '__main__':
