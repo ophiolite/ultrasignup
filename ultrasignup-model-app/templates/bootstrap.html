@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Simply Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 {
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 {
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 {
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 {
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: inline-block;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Endurostew</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">PROJECTS</a></li>
+        <li><a href="#">BLOG</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Endurostew: a melting pot of all things endurance</h3>
+  <img src="images/Miwok1.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Headshot" width="350" height="350">
+  <h3>Endurance sports + Data Science -> Predictive Analytics</h3>
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">Race Directors Services</h3>
+  <p>Predictive modeling to optimize resources based on who will show</p>
+    <button type="button" class="btn btn-primary">Current Model Statistics</button>
+  </a>
+</div>
+
+<!-- Third Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">Athletes: Just for Fun</h3>
+
+  <p>Want to know your probability to finish popular ultramarathons? I'm optimizing predictive models for that...</p>
+  <div class="form-control">
+    <ul class="col-xs-2">
+    <label for="ex1">Age</label>
+    <input "form-control" id="ex1" type="text"></ul>
+<div class="dropdown-toggle">
+  <button type="button"  data-toggle="dropdown">Gender<span class="caret"></span></button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">M</a></li>
+    <li><a href="#">F</a></li></ul>
+    <ul class="btn btn-primary dropdown-toggle">
+  <button type="button" data-toggle="dropdown">
+   Race <span class="caret"></span></button>
+   <ul class="dropdown-menu" role="menu">
+     <li><a href="#">Western States 100</a></li>
+     <li><a href="#">Bear 100</a></li>
+     <li><a href="#">Black Canyon 100k</a></li>
+     <li><a href="#">Canyons 100k</a></li>
+     <li><a href="#">Eastern States 100</a></li>
+     <li><a href="#">FatDog 120</a></li>
+     <li><a href="#">Javelina 100</a></li>
+     <li><a href="#">San Diego 100</a></li>
+     <li><a href="#">Sean O'Brien 100k</a></li>
+     <li><a href="#">Tahoe Rim Trail 100
+     <li><a href="#">Zion 100</a></li></a></li>
+   </ul></ul>
+   <button type="button" class="btn btn-primary" glyphicon glyphicon-search><span class="glyphicon glyphicon-search"></span>Predict My Success</button>
+ </div>
+
+
+  </a>
+</div>
+
+<!-- Fourth Container (Grid) -->
+<div class="container-fluid bg-3 text-center">
+  <h3 class="margin">Blog - A little of this, a little of that</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Race Reports</p>
+      <img src="images/RR100_race.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4">
+      <p>Fun with Data Science</p>
+      <img src="images/datasci.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4">
+      <p>Philosophy and Life</p>
+      <img src="images/cast.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Endurostew - Stefanie Bernosky
+  <a href="mailto:stef@geotarheel.com"><span class="glyphicon glyphicon-envelope"></span></a><a href="mailto:stef@geotarheel.com">
+</p>
+<!-- Place this tag where you want the button to render. -->
+<p><a class="github-button" href="https://github.com/ophiolite" data-style="mega" aria-label="Follow @ophiolite on GitHub">Follow @ophiolite</a></p>
+<p>
+<a href="https://www.linkedin.com/pub/stefanie-bernosky/7/b4/54b">
+<i<a href="https://www.linkedin.com/pub/stefanie-bernosky/7/b4/54b">
+
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_120x33.png" width="120" height="33" border="0" alt="View Stefanie Bernosky's profile on LinkedIn">
+    </a></p>
+  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com">www.w3schools.com</a></p>
+</footer>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
