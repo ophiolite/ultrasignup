@@ -27,7 +27,7 @@ def race_dir_button():
     # AUC_score = ''
     # accuracy_score = '0.956'
     # accurate_show = 'Successfully predicted 3015 out of 3016 runners who showed'
-    predict = '<img src="images/model_output3.jpg" class="img-responsive" style="display:inline" alt="Headshot" width="800" height="800">'
+    predict = '<img src="images/model_output2.jpg" class="img-responsive" style="display:inline" alt="Headshot" width="800" height="800">'
     #return jsonify(predict) ##return when button clicked
     return predict
 
