@@ -9,6 +9,9 @@ from sklearn.ensemble import GradientBoostingClassifier
 import requests
 
 app = Flask(__name__)
+#filename = '../model/DNS_model.pkl'
+filename2 = '../model/Finish_model.pkl'
+
 
 @app.endpoint('model.endpoint')
 
@@ -16,6 +19,9 @@ def load_model(filename):
     with open(filename) as f:
         model = pickle.load(f)
     return model
+
+#DNS_model = load_model(filename)
+Finish_model = load_model(filename2)
 
 def race_dir_button():
     '''When clicked, allows for model stats to pop up for the DNS model'''
@@ -160,6 +166,8 @@ def DNS_stats():
 @app.route('/about', methods=['GET'])
 def about():
    return render_template('about.html')
+
+
 
 if __name__ == '__main__':
     #filename = '../model/DNS_model.pkl'
