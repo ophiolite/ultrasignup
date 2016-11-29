@@ -145,7 +145,7 @@ def Finish_proba():
     round_prob = "%.2f" % finish_proba
     statement = '<p class=\'text-center\'>How cool?!? You have a ' + round_prob + '%'+' chance of finishing ' \
     + race + '.</p>' + \
-    '<p class=\'text-center\'>For Entertainment Purposes Only:</p><p class=\'text-center\'> All probabilities are conditional on proper training.</p><p class=\'text-center\'> However, you are a badass even for making it to the start!</p>'
+    '<p class=\'text-center\'><b>For Entertainment Purposes Only:</b></p><p class=\'text-center\'> All probabilities are conditional on proper training.</p><p class=\'text-center\'> However, you are a badass even for making it to the start!</p>'
     #return jsonify(statement) ##returns the numeric probability of success for selected race
     return statement
 
