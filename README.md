@@ -144,3 +144,7 @@ November 28, 2016:
 * Finishing touches on slides
 * Migrating webapp to AWS
 * Updates to webapp to increase readibility and navigation
+
+November 29, 2016:
+* Subdomain created for blog for interim deployment
+* Modifying html to reroute to endurostew
