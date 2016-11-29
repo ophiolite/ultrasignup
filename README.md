@@ -142,4 +142,5 @@ November 27, 2016:
 
 November 28, 2016:
 * Finishing touches on slides
-* Begin migrating webapp to AWS
+* Migrating webapp to AWS
+* Updates to webapp to increase readibility and navigation
