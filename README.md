@@ -148,3 +148,7 @@ November 28, 2016:
 November 29, 2016:
 * Subdomain created for existing blog for interim 
 * Modifying html to reroute to endurostew
+
+November 30, 2016:
+* Launched to endurostew.com
+* Need to fix broken links on blog
