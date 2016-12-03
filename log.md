@@ -173,3 +173,7 @@ December 1, 2016:
 * Moving this log to a new file and start compiling more succinct readme
 Contact GitHub API Training Shop Blog About
 
+December 3, 2016:
+
+* Lottery day for 2017 WSER
+  * Will run lottery pulls through model when loaded to ultrasignup
